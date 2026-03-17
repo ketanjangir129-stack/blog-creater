@@ -102,8 +102,8 @@ function Dashboard() {
                     ))}
                 </div>
             </div>
+            <Footer/>
         </div>
-        <Footer/>
     </motion.div> 
   );
 }
