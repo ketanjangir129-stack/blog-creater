@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import { MdEdit } from "react-icons/md";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import {motion} from "motion/react";
+import Profile from "../Popup-modals/Profile";
+import Footer from "./Footer";
 
 function Dashboard() {
 
@@ -36,33 +38,30 @@ function Dashboard() {
         animate={{opacity:1}}
         exit={{opacity:0}}
     >
-        <div className="p-2">
-            <div className="flex justify-between p-2">
-                <h1 className="font-bold text-2xl">Dashboard</h1>
-                {/* <h2>Welcome {user.email}</h2> */}
-                <button onClick={handleLogout} className="hover:cursor-pointer bg-red-600 border-2 px-2 py-1 rounded-full text-white ">
-                    LogOut
-                </button>
+        <div className="bg-[#e9edc9]">
+            <div className="flex justify-between py-1 px-4 bg-[#ccd5ae] items-center sticky top-0 z-50">
+                <h1 className="font-bold text-2xl text-white">Dashboard</h1>
+                <Profile/>
             </div>
 
-            <div className="mt-2 py-1.5 px-3">
+            <div className="py-10 px-3 flex justify-end">
                 <button 
                     onClick={()=>navigate("/addblog")}
                     className="bg-green-500 rounded-full px-3 py-1 text-white hover:cursor-pointer text-lg font-semibold"
-                >
-                    Add blog +
+                    >
+                    Create blog +
                 </button>
             </div>
 
-            <div className="mt-3 p-2 flex flex-col items-center">
-                <h1 className="text-2xl font-semibold mb-2">Blog Posts</h1>
+            <div className="px-8 pb-8 flex flex-col items-center">
+                <h1 className="text-2xl font-semibold mb-2 text-black">Blog Posts</h1>
                 <div 
-                    className="mt-3 bg-gray-100 rounded-2xl py-3 px-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3 items-start"
+                    className="mt-3 bg-[#fefae0] rounded-2xl py-3 px-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3 items-start"
                 >
                     {blog.map((b, index) => (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-200 mb-2 mt-3"
+                            className="bg-[#faedcd] p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-200 mb-2 mt-3"
                         >
                             <h4 className="text-xl font-semibold text-gray-800 mb-2">
                                 {b.title}
@@ -71,14 +70,14 @@ function Dashboard() {
                             <div 
                                 className="break-words blog-content line-clamp-4" 
                                 dangerouslySetInnerHTML={{ __html: b.description }} 
-                            >
+                                >
                                 {/* {b.description} */}
                             </div>
                             
                             <div className="mt-3 flex gap-3 items-center justify-between" >
                                 <button 
                                     onClick={()=>window.open(`/viewblog/${index}`,"_blank")}
-                                    className="mt-4 py-1 px-3 rounded-2xl hover:scale-105 transition duration-200 shadow hover:cursor-pointer text-blue-500 text-sm font-semibold"    
+                                    className="mt-4 py-1 px-3 rounded-2xl hover:scale-105 transition duration-200 shadow hover:cursor-pointer text-blue-500 text-sm font-semibold bg-white"    
                                 >
                                     Read More
                                 </button>
@@ -104,6 +103,7 @@ function Dashboard() {
                 </div>
             </div>
         </div>
+        <Footer/>
     </motion.div> 
   );
 }
