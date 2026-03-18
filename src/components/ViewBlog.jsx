@@ -1,11 +1,9 @@
 import { useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BlogContext from "../Context/BlogContext";
 import {motion} from "motion/react";
 
 function ViewBlog(){
-
-    const navigate = useNavigate();
 
     const {blog} = useContext(BlogContext);
     const {index} = useParams();

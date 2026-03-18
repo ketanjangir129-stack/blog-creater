@@ -24,7 +24,7 @@ function App() {
             <Route path="/viewblog/:index" element={<ViewBlog />} />
           </Routes>
         </AnimatePresence>
-        <ToastContainer position="top-center" />
+        <ToastContainer position="top-right" />
       </BlogContextProvider>
     </>
   );
