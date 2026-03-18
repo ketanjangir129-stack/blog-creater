@@ -27,7 +27,6 @@ function App() {
         <ToastContainer position="top-center" />
       </BlogContextProvider>
     </>
-    
   );
 }
 

@@ -35,20 +35,17 @@ function EditBlog() {
         initial={{opacity:0,scale:0.95}}
         animate={{opacity:1,scale:1}}
         exit={{opacity:0,scale:0.95}}
-        className="p-2"
+        className="py-3 px-10 bg-[#fefae0] min-h-screen"
     >
         <div className="text-3xl hover:cursor-pointer" onClick={()=>navigate("/dashboard")}>
             ←
         </div>
-        <div className="flex justify-between items-center pb-2 mt-2">
-            <h1 className="text-[28px] font-semibold">Edit Blog</h1>
-        </div>
-        <hr className="text-gray-300" />
-        <div className="flex justify-center mt-10">
+        <div className="flex flex-col items-start md:items-center justify-center mt-3">
+            <h1 className="text-[28px] font-semibold mb-3">Edit Blog</h1>
             <form 
                 onSubmit={handleUpdate}
                 className="p-6 flex flex-col gap-4 border border-white/20
-                rounded-xl bg-white shadow-lg shadow-white/40 w-200"
+                rounded-xl bg-[#faedcd] shadow-lg shadow-white/40 w-full"
                 >
                 <label htmlFor="title" className="flex flex-col gap-1 text-black text-sm">
                     <h1 className="text-sm font-semibold mb-2">Blog Title:</h1>
@@ -57,13 +54,12 @@ function EditBlog() {
                         id="ptitle"
                         name="title"
                         placeholder="Enter Blog Title"
-                        className="px-3 py-2 rounded-md bg-gray-100 text-black
-                        border border-gray-300
-                        focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                        className="px-3 py-2 rounded-md bg-white text-black
+                        border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
                         value={title}
                         onChange={(e)=>setTitle(e.target.value)} 
                         required
-                        />
+                    />
                 </label>
                 <h1 className="text-sm font-semibold">Blog Description :</h1>
                 <ReactQuill
@@ -72,7 +68,7 @@ function EditBlog() {
                     formats={formats}
                     value={description}
                     onChange={(value)=>setDescription(value)}
-                    className="h-70"
+                    className="bg-white"
                 />
 
                 {/* <textarea 
@@ -87,9 +83,9 @@ function EditBlog() {
                 </textarea> */}
                 <button 
                     type="submit"
-                    className="mt-10 py-2 rounded-md bg-blue-600 text-white
-                        hover:bg-blue-700 transition
-                        shadow-md shadow-white/30 cursor-pointer"
+                    className="py-2 rounded-md bg-blue-600 text-white
+                    hover:bg-blue-700 transition
+                    shadow-md shadow-white/30 cursor-pointer"
                 >
                     Update Blog
                 </button>

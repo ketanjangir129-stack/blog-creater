@@ -29,8 +29,12 @@ function Footer(){
                         <a href="https://github.com/ketanjangir129-stack" target="_blank" className="hover:text-white">
                         GitHub
                         </a>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank" className="hover:text-white">
-                        LinkedIn
+                        <a 
+                            href="https://linkedin.com/in/ketanjangir8313" 
+                            target="_blank" 
+                            className="hover:text-white"
+                        >
+                            LinkedIn
                         </a>
                     </div>
                 </div>

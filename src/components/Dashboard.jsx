@@ -48,7 +48,7 @@ function Dashboard() {
                 <button 
                     onClick={()=>navigate("/addblog")}
                     className="bg-green-500 rounded-full px-3 py-1 text-white hover:cursor-pointer text-lg font-semibold"
-                    >
+                >
                     Create blog +
                 </button>
             </div>
@@ -70,7 +70,7 @@ function Dashboard() {
                             <div 
                                 className="break-words blog-content line-clamp-4" 
                                 dangerouslySetInnerHTML={{ __html: b.description }} 
-                                >
+                            >
                                 {/* {b.description} */}
                             </div>
                             

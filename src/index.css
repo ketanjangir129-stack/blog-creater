@@ -12,3 +12,11 @@
   font-size: 18px;
   font-weight: bold;
 }
+.ql-container {
+  background: white;
+  min-height: 250px;
+}
+.ql-editor {
+  background: white;
+  min-height: 250px;
+}

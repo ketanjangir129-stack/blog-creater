@@ -16,21 +16,17 @@ function ViewBlog(){
             initial={{opacity:0}}
             animate={{opacity:1}}
             exit={{opacity:0}}
-            className="p-2"
+            className="py-3 px-10 bg-[#e9edc9] min-h-screen"
         >
-            {/* <div className="text-3xl hover:cursor-pointer" onClick={()=>navigate("/dashboard")}>
-                ←
-            </div> */}
-
             <div className="mt-3 p-2 flex flex-col items-center">
                 <h1 className="text-2xl font-semibold mb-2">
                     Blog Post 
                 </h1>
                 <div 
-                    className="mt-3 bg-gray-100 rounded-2xl py-3 px-10 grid grid-cols-1"
+                    className="mt-3 bg-[#fefae0] rounded-2xl py-3 px-10 grid grid-cols-1"
                 >
                     <div
-                        className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-200 mb-2 mt-3"
+                        className="bg-[#faedcd] p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-200 mb-2 mt-3"
                     >
                         <h4 className="text-xl font-semibold text-gray-800 mb-2">
                             {blogView.title}
